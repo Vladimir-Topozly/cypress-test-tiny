@@ -1,6 +1,5 @@
 describe('page', () => {
   const node = '.TreeNode__name'
-  const nnn = 'div.ReactVirtualized__Grid__innerScrollContainer > div:nth-child(10)'
   const dropdown = '.DropdownTree__arrow-zone';
   const clear = 'button.Button.Button--link.Tree__clear';
   const cancel = 'button.Button.Button--link-secondary.Tree__cancel';
@@ -23,7 +22,6 @@ describe('page', () => {
     //on the ather hand I actually valide the entire tree in scenario #3
   })
 
-
   it('2. You can only select one node.', () => {
     openDropdown()
     cy.get(arrowOne).click()
@@ -31,7 +29,6 @@ describe('page', () => {
     // Assert that dropdown is unavailable to select aother node 
     cy.get(node).contains('Node 1').should('not.be.visible')
     })
-
 
 it('3. You can select all nodes in the tree, even ones with children.', () =>{
   openDropdown()
@@ -82,7 +79,6 @@ it('4.Expand/Collapse functionality is available when clicking on the arrow of t
   cy.get(node).contains('Node 1').should('be.visible')
 })
 
-
   it('5. When clicking on the label of a node with children, it will select it and not expand/collapse.', () =>{
     openDropdown()
     cy.get(arrowOne).click()
@@ -95,11 +91,8 @@ it('4.Expand/Collapse functionality is available when clicking on the arrow of t
     cy.get(node).contains('Node 3').should('not.be.visible')
   })
 
-
   it('6. Cancel should close the dropdown and perform no action.', () => {
     openDropdown()
-    // make sure dropdpwn is open now
-    cy.get(node).should('be.visible')
     cy.get(cancel).click()
     // Assert that dropdown is closed now
     cy.get(node).should('not.be.visible')
