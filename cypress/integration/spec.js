@@ -20,7 +20,7 @@ describe('page', () => {
     openDropdown()
     cy.get(arrowOne).click()
     cy.get(node).contains('Node 2').should('be.visible') // I didn't really came up with how to chech this is indeed a tree with Nodes, 
-    //on the ather hand I actually validating the entire tree in scenario #3
+    //on the ather hand I actually valide the entire tree in scenario #3
   })
 
 
