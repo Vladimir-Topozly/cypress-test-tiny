@@ -42,24 +42,32 @@ Collapse the first list.
 Expected: Expand/Collapse functionality is working correctly and releases the relevant list
 
 
-5) Open dropdown menu list and expand the first arrow-down to release the first list
-Select 'Node 2' as it is a part of the first dropdown list and has children
-- Validate that after selection the valid node path appeared in the main field
-Open dropdown again
+5) Open dropdown menu list and expand the first arrow-down to release the first list.
+
+Select 'Node 2' as it is a part of the first dropdown list and has children.
+
+- Validate that after selection the valid node path appeared in the main field.
+
+Open dropdown again.
+
 - Validate that the dropdown list structure remain untouch and the list neither collapsed nor expanded by checking visibility of nodes above and abscence underneath 'Node 2'.
 
 Expected: Selection of the node only selects it and doesn't change the dropdown list structure
 
-6) Open dropdown menu list
-Click the 'cancel' button
-- Validate than nodes are not visible anymore from dropdown as well as the 'cancel' button 
+6) Open dropdown menu list.
+
+Click the 'cancel' button.
+
+- Validate than nodes are not visible anymore from dropdown as well as the 'cancel' button .
 
 Expected: Cancel closes the dropdown 
 
 7) Open dropdown menu list
-Select the first node
-Click the 'clear' button
-- Validate that main fiesld is empty
+Select the first node.
+
+Click the 'clear' button.
+
+- Validate that main fiesld is empty.
 
 Expected: Clear button clears the selection.
 
