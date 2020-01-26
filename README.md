@@ -20,15 +20,24 @@ Expected: List collapsed; 'Node 1' is NOT visible
 Expected: Path is corresponding to the node selected
 
 
-4) Open dropdown menu list and expand the first arrow-down to release the first list
-- Validate that 'Node 2' is available after we expanded the first list
-Expand the second arrow-down to release the second list
-- Validate that all nodes from 3-9 are available for to be selected
-Collapse the second list
-- Validate that all nodes from 3-9 are now unavailabe for to be selected and not visible 
-- Validate that 'Node' is still available for to be selected and  visible 
-Collapse the first list
-- Validate that 'Node 2' is now unavailable to be selected and is not visible
+4) Open dropdown menu list and expand the first arrow-down to release the first list.
+
+- Validate that 'Node 2' is available after we expanded the first list.
+
+Expand the second arrow-down to release the second list.
+
+- Validate that all nodes from 3-9 are available for to be selected.
+
+Collapse the second list.
+
+- Validate that all nodes from 3-9 are now unavailabe for to be selected and not visible .
+
+- Validate that 'Node' is still available for to be selected and  visible .
+
+Collapse the first list.
+
+- Validate that 'Node 2' is now unavailable to be selected and is not visible.
+
 
 Expected: Expand/Collapse functionality is working correctly and releases the relevant list
 
