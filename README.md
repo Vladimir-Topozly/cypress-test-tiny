@@ -1,30 +1,48 @@
-[Cypress documentation is available here](https://docs.cypress.io/guides/overview/why-cypress.html).
 
-If you don't have it yet, make sure to [install node & npm](https://www.npmjs.com/get-npm).
+# Highlevel Test-Plan:
 
-# Installation
+ 1) Open dropdown menu list and expand the first arrow
+ - Validate that elements indeed dropdown from the list after we expand it by clicking the narrow-down
+Expected: List expanded; Node 2 is visible
 
-```javascript
-npm install
-```
 
-# Run
+2) Open dropdown menu list and expand the first arrow-down
+Select 'Node 2' from the second list 
+Try selecting one more 'Node 1' node straight away
+Expected: List collapsed; Node 1 is visible
 
-```javascript
-npm run cypress:open
-``` 
 
-# The Exercise
+3) Open dropdown menu list and expand the first and the second arrow-down to expand all lists
+Select every note one after another and validate the path appeared in the main field corresponds to the selected node
+Expected: Path is equal to the specified string
 
-Your assignment is to write a Test Plan & implement those tests using Cypress. 
-You should be testing DropdownTree component (will be visible when you run the Cypress command listed above) according to the following requirements:
 
-1. The component shows a tree that contains nodes. Some of them have children.
-2. You can only select one node.
-3. You can select all nodes in the tree, even ones with children.
-4. Expand/Collapse functionality is available when clicking on the arrow of the node which has children.
-5. When clicking on the label of a node with children, it will select it and not expand/collapse.
-6. Cancel should close the dropdown and perform no action.
-7. Clear button should clear the selection.
+4) Open dropdown menu list and expand the first arrow-down to release the first list
+- Validate that 'Node 2' is available after we expanded the first list
+Expand the second arrow-down to release the second list
+- Validate that all nodes from 3-9 are available for to be selected
+Collapse the second list
+- Validate that all nodes from 3-9 are now unavailabe for to be selected and not visible 
+- Validate that 'Node' is still available for to be selected and  visible 
+Collapse the first list
+- Validate that 'Node 2' is now unavailable to be selected and is not visible
+
+
+5) Open dropdown menu list and expand the first arrow-down to release the first list
+Select 'Node 2' as it is a part of the first dropdown list and has children
+- Validate that after selection the valid node path appeared in the main field
+Open dropdown again
+- Validate that the dropdown list structure remain untouch and the list neither collapsed nor expanded by checking visibility of nodes above and abscence underneath 'Node 2'
+
+6) Open dropdown menu list
+Click the 'cancel' button
+- Validate than nodes are not visible anymore from dropdown as well as the 'cancel' button 
+
+
+7) Open dropdown menu list
+Select the first node
+Click the 'clear' button
+- Validate that main fiesld is empty
+
 
 Good luck!
